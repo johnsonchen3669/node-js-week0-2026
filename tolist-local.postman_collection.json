@@ -1,0 +1,137 @@
+{
+  "info": {
+    "_postman_id": "1913de48-1a10-4381-957d-5d4195fe79a6",
+    "name": "tolist-local",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29783739"
+  },
+  "item": [
+    {
+      "name": "取得所有待辦",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3005/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增單筆待辦",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"新增內容\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3005/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除所有待辦",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3005/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除單筆待辦",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3005/todos/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "todos",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "編輯單筆待辦",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"修改內容\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3005/todos/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "todos",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
