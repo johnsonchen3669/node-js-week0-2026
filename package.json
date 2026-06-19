@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "author": "",
+  "main": "index.js",
+  "description": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "bun --hot server.js",
+    "watch": "bun --watch server.js",
+    "start": "bun server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "dependencies": {
+    "nanoid": "^5.1.11",
+    "uuid": "^14.0.0"
+  }
+}
