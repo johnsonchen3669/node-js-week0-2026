@@ -21,7 +21,7 @@ function getTodos(req, res) {
 async function postTodos(req, res) {
   try {
     const parsedBody = await parseBody(req);
-    if (!parsedBody?.title) {
+    if (!parsedBody?.title.trim()) {
       errorMessage(res, 400, '請提供 title 欄位');
       return;
     }
@@ -45,7 +45,7 @@ async function patchTodos(req, res) {
       errorMessage(res, 404, 'Todo not found');
       return;
     }
-    if (!parsedBody?.title) {
+    if (!parsedBody?.title.trim()) {
       errorMessage(res, 400, '請提供 title 欄位');
       return;
     }

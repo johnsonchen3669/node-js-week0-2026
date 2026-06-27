@@ -9,7 +9,7 @@ async function parseBody(req) {
       try {
         resolve(raw ? JSON.parse(raw) : {});
       } catch {
-        resolve({});
+        reject(new Error('Invalid JSON format'));
       }
     });
     req.on('error', reject);
